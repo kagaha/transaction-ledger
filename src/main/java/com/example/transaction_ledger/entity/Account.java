@@ -2,6 +2,7 @@ package com.example.transaction_ledger.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -24,7 +25,8 @@ public class Account {
     @Column(nullable = false)
     private BigDecimal balance = BigDecimal.ZERO;
 
-    @Column(name="created_at", insertable = false, updatable = false)
+    @CreationTimestamp
+    @Column(name="created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
     public Account(String name) {

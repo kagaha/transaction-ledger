@@ -16,6 +16,7 @@ CREATE TABLE transactions (
                               amount DECIMAL(19, 2) NOT NULL,
                               description VARCHAR(255),
                               reference_id VARCHAR(100) NOT NULL,
+                              balance_after_transaction DECIMAL(19, 2),
                               created_at TIMESTAMP(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
 
                               CONSTRAINT pk_transactions PRIMARY KEY (id),

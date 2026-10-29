@@ -11,7 +11,6 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name="transactions")
 @Getter
-@Setter
 @NoArgsConstructor
 public class LedgerTransactions {
 
@@ -35,7 +34,18 @@ public class LedgerTransactions {
     @Column(name = "reference_id", nullable = false, updatable = false)
     private String referenceId;
 
+    @Column(name = "balance_after_transaction", nullable = false)
+    private BigDecimal balanceAfterTransaction;
+
     @Column(name="created_at", insertable = false, updatable = false)
     private LocalDateTime createdAt;
 
+    public LedgerTransactions(Long accountId, TransactionType type, BigDecimal amount, String description, String referenceId, BigDecimal balanceAfterTransaction) {
+        this.accountId = accountId;
+        this.type = type;
+        this.amount = amount;
+        this.description = description;
+        this.referenceId = referenceId;
+        this.balanceAfterTransaction = balanceAfterTransaction;
+    }
 }
