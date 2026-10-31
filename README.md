@@ -134,7 +134,21 @@ The application exposes the following six endpoints.
 
 For complete request examples, response formats, query parameters, and error responses, refer to [API Contracts](docs/API_CONTRACTS.md).
 
-## 8. Key Features
+## 8. API Documentation (Swagger UI)
+
+The application integrates Swagger UI using Springdoc OpenAPI to provide interactive API documentation.
+
+Swagger UI allows users to explore the available API endpoints, view request and response structures, and execute API requests directly from the browser.
+
+Once the application is running, access Swagger UI using:
+
+**Swagger UI:** http://localhost:8080/swagger-ui.html
+
+**OpenAPI Specification:** http://localhost:8080/v3/api-docs
+
+
+
+## 9. Key Features
 
 ### Account Management
 
@@ -166,7 +180,7 @@ For complete request examples, response formats, query parameters, and error res
 - Lock accounts in ascending ID order to reduce the risk of deadlocks.
 - Roll back the transfer if an operation fails within the transaction.
 
-## 9. Database Migrations
+## 10. Database Migrations
 
 Flyway manages database schema changes using migration scripts stored in:
 
@@ -174,7 +188,7 @@ Flyway manages database schema changes using migration scripts stored in:
 
 Ensure that the configured MySQL user has sufficient permissions to create or modify the required tables.
 
-## 10. Error Handling
+## 11. Error Handling
 
 The application provides structured error responses for situations such as:
 
@@ -186,19 +200,19 @@ The application provides structured error responses for situations such as:
 
 HTTP status codes depend on the application's configured exception handling. Refer to the API Contracts document for the status codes implemented by the application.
 
-## 11. Assumptions
+## 12. Assumptions
 
 The application follows defined business rules for account creation, transaction processing, reference validation, pagination, and money transfers.
 
 See [Assumptions](docs/ASSUMPTIONS.md) for the detailed business rules and implementation assumptions.
 
-## 12. Stopping the Application
+## 13. Stopping the Application
 
 Stop the Spring Boot application by pressing `Ctrl+C` in the terminal where it is running.
 
 Stop MySQL separately if you no longer need it.
 
-## 13. Submission Contents
+## 14. Submission Contents
 
 The project submission contains:
 

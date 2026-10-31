@@ -21,7 +21,7 @@ import java.math.BigDecimal;
 @Service
 public class TransactionService {
 
-    private final int MAX_PAGE_SIZE=100;
+
     private final TransactionRepository transactionRepository;
     private final AccountRepository accountRepository;
 
